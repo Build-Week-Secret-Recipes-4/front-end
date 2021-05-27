@@ -16,36 +16,33 @@ import EditRecipes from "./routes/editRecipes/EditRecipes";
 function App() {
 	// const [user, setUser] = useState({});
 	return (
-        <div>
-			<h1>Family Recipes</h1>
-		</div>
-		// <Switch>
-		// 	<PrivateRoute
-		// 		path="/account"
-		// 		history={useHistory()}
-		// 		component={Dashboard}
-		// 	/>
-		// 	<PrivateRoute path="/recipes/add" component={AddRecipes}>
-		// 		{" "}
-		// 		<AddRecipes />{" "}
-		// 	</PrivateRoute>
-		// 	<PrivateRoute to="/recipes/:id/edit" component={EditRecipes} />
+		<Switch>
+			<PrivateRoute
+				path="/account"
+				history={useHistory()}
+				component={Dashboard}
+			/>
+			<PrivateRoute path="/recipes/add" component={AddRecipes}>
+				{" "}
+				<AddRecipes />{" "}
+			</PrivateRoute>
+			<PrivateRoute to="/recipes/:id/edit" component={EditRecipes} />
 
-		// 	<Route path="/account" component={Dashboard} />
-		// 	<Route path="/add" > <AddRecipes/> </Route>
-		// 	{/* <PrivateRoute to="/recipes/:id/edit" /> */}
+			<Route path="/account" component={Dashboard} />
+			<Route path="/add" > <AddRecipes/> </Route>
+			{/* <PrivateRoute to="/recipes/:id/edit" /> */}
 
-		// 	<Route path="/recipes/:id" />
-		// 	<Route path="/recipes" component={Recipes} history={useHistory()} />
-		// 	<Route
-		// 		path="/login"
-		// 		// setUser={setUser}
-		// 		history={useHistory()}
-		// 		component={Login}
-		// 	/>
-		// 	<Route path="/register" history={useHistory()} component={Register} />
-		// 	<Route exact path="/" component={Home} />
-		// </Switch>
+			<Route path="/recipes/:id" />
+			<Route path="/recipes" component={Recipes} history={useHistory()} />
+			<Route
+				path="/login"
+				// setUser={setUser}
+				history={useHistory()}
+				component={Login}
+			/>
+			<Route path="/register" history={useHistory()} component={Register} />
+			<Route exact path="/" component={Home} />
+		</Switch>
 	);
 
 }
