@@ -26,9 +26,9 @@ export default function Login(props) {
 			.then((res) => {
 				console.log(res);
 				setLoginMessage(res.data.message);
-				localStorage.setItem("email", res.data.user.email);
-				localStorage.setItem("username", res.data.user.username);
-				localStorage.setItem("id", res.data.user.id);
+				localStorage.setItem("user_email", res.data.user.email);
+				localStorage.setItem("user_username", res.data.user.username);
+				localStorage.setItem("user_id", res.data.user.id);
 
 				localStorage.setItem("token", res.data.token);
 				setTimeout(function () {
